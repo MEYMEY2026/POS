@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ប្រព័ន្ធស្វែងរកព័ត៌មានឱសថ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>បណ្ណាល័យព័ត៌មានឱសថ</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchMedicine()" placeholder="ស្វែងរកថ្នាំតាមឈ្មោះម៉ាក ធាតុផ្សំ ឬក្រុមថ្នាំ...">
+        </div>
+        
+        <div class="drug-grid" id="drugGrid">
+            </div>
+    </div>
+
+    <div id="drugModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">ព័ត៌មានឱសថលម្អិត</h2>
+            
+            <div class="modal-image-container">
+                <img id="modalDrugImage" src="" alt="Drug Image">
+            </div>
+
+            <div class="info-table">
+                <div class="info-row"><strong>ឈ្មោះម៉ាក (Brand Name):</strong> <span id="brandName"></span></div>
+                <div class="info-row"><strong>ឈ្មោះធាតុផ្សំ (Generic Name):</strong> <span id="genericName"></span></div>
+                <div class="info-row"><strong>ក្រុមថ្នាំ (Drug Class):</strong> <span id="drugClass"></span></div>
+                <div class="info-row"><strong>កម្រិត/ទំហំ (Strength):</strong> <span id="strength"></span></div>
+                <div class="info-row"><strong>ទម្រង់ថ្នាំ (Form):</strong> <span id="form"></span></div>
+                <div class="info-row dosage-zone"><strong>របៀបប្រើប្រាស់ (Dosage & Route):</strong> <span id="dosageRoute"></span></div>
+                <div class="info-row danger-zone"><strong>ផលរំខាន/បម្រាម (Side Effects & Cautions):</strong> <span id="sideEffects"></span></div>
+                <div class="info-row note-zone"><strong>កំណត់ចំណាំបន្ថែម (Notes):</strong> <span id="notes"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
